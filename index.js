@@ -6,7 +6,7 @@ module.exports = class extends Page {
         super({title:"Home", sName:"Richard Hildred"});
     }
     render(sPage) {
-        const oJson = fetch("https://prog8110winter2021section2-default-rtdb.firebaseio.com/meals.json").json();
+        const oJson = fetch("https://ux308final-51ac0-default-rtdb.firebaseio.com/meals.json").json();
         console.log(oJson);
         let sResult = "<h1>Upcoming Popup Meals</h1>";
         Object.keys(oJson).map((key) => {
@@ -19,7 +19,7 @@ module.exports = class extends Page {
             <p>${oEntity.full_description}</p>
             <form action="https://serene-taiga-04277.herokuapp.com/payment" method="post">
             <input type="hidden" name="title" value="${oEntity.title}" />
-            <input type="hidden" name="price" value="21" />
+            <input type="hidden" name="price" value="56" />
             <input type="tel" placeholder="enter your number" name="telephone"/>
             <button type="submit">Order now</button>
             </form>
